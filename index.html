@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Vue Js development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- link to css file -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Codelex application form</title>
+</head>
+<body>
+<div class="container">
+    <div class="row col-md-6 offset-md-3">
+        <form id="appData" @submit="validation" method='post'>
+            <div class="card form-group text-white bg-info">
+                <div class="card-header flex">
+                    <h2>Codelex application form</h2>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" v-model="name" class="form-control" type="text" required>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input id="lastname" v-model="lastname" class="form-control" type="text" required>
+            </div>
+            <div class="form-group">
+                <label for="birthday">Birthday</label>
+                <input id="birthday" v-model="birthday" class="form-control" type="date" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone number</label>
+                <input id="phoneNumber" v-model="phoneNumber" class="form-control" type="text" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input id="email" v-model="email" class="form-control" type="email" required>
+            </div>
+            <hr/>
+
+            <div class="form-group">
+                <label for="question1">Why do you want to learn coding?</label>
+                <textarea id="question1" v-model="question1" class="form-control" rows="4" cols="50" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="question2">Do you have any previous experience?</label>
+                <textarea id="question2" v-model="question2" class="form-control" rows="4" cols="50"
+                          placeholder="We just want to know you are not afraid of computers.." required></textarea>
+            </div>
+            <hr/>
+
+            <div class="form-group">
+                <label for="logicalQuestion1">Tanya is older than Eric. Cliff is older than Tanya. Eric is older than
+                    Cliff. If the first two statements are true, the third statement is?</label>
+                <textarea id="logicalQuestion1" v-model="logicalQuestion1" class="form-control" rows="1" cols="50" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="logicalQuestion2">All the tulips in Zoe's garden are white. All the pansies in Zoe's garden
+                    are yellow. All the flowers in Zoe's garden are either white or yellow.
+                    If the first two statements are true, the third statement is?</label>
+                <textarea id="logicalQuestion2" v-model="logicalQuestion2" class="form-control" rows="1" cols="50" required></textarea>
+            </div>
+            <hr/>
+
+            <div class="form-group">
+                <h6>What does HTML stand for?</h6>
+                <div class="form-check">
+                    <input type="radio" name="quiz1" id="quiz1-1" value="#" required>
+                    <label for="quiz1-1">
+                        Hyperlinks and Text Markup Language
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="quiz1" id="quiz1-2" value="#">
+                    <label for="quiz1-2">
+                        Hypertext Markup Language
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="quiz1" id="quiz1-3" value="#">
+                    <label for="quiz1-3">
+                        Home Tool Markup Language
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <h6>One loop inside the body of another loop is called:</h6>
+                <div class="form-check">
+                    <input type="radio" name="quiz2" id="quiz2-1" value="#" required>
+                    <label for="quiz2-2">
+                        Loop in loop
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="quiz2" id="quiz2-2" value="#">
+                    <label for="quiz2-2">
+                        Nested loop
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="quiz2" id="quiz3-3" value="#">
+                    <label for="quiz3-3">
+                        Double loop
+                    </label>
+                </div>
+            </div>
+            <hr/>
+
+            <button id="button" class="btn btn-primary btn-lg">Submit</button>
+        </form>
+
+    </div>
+</div>
+
+
+<script src="action.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
